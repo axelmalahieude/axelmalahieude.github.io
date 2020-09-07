@@ -5,13 +5,16 @@ permalink: /resume/
 ---
 <link rel="stylesheet" href="/assets/css/style.css">
 <div>
-    <div class='row'>
-        <h1>Education</h1>
+    <p class="header">Education</p>
+    <div class='row section-background'>
         <div class='column' style="flex: .5">
-            <h2>University of California, Los Angeles</h2>
-            <h3>Expected June 2021</h3>
+            <p class="title">University of California, Los Angeles</p>
+            <p class="date">Expected June 2021</p>
         </div>
         <div class='column'>
+        ● Involvements: Unmanned Aerial Systems @ UCLA, Upsilon Pi Epsilon Honor Society
+● Relevant coursework: Networks, Databases, Web Applications, Data Structures & Algorithms,
+Operating Systems, Programming Languages, Computer Graphics, Intro, Intermediate, & Advanced GIS
         </div>
     </div>
 </div>

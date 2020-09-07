@@ -45,6 +45,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     max-width:350px;
+    max-height:350px;
 }
 
 .image-container {
@@ -83,5 +84,23 @@ li {
 span {
     display: inline-flex;
     align-items: center;
+}
+
+.header {
+    font-size: xx-large;
+    color: #2052f7;
+    font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif;
+}
+
+.title {
+    font-size: medium;
+
+}
+
+.section-background {
+    padding: 10px;
+    background-color: #cdd7f7;
+    box-shadow: 10px 10px 8px #888888;
+    border-radius: 10px;
 }
   
