@@ -4,6 +4,10 @@ title: "GIS Projects"
 permalink: /gis-projects/
 ---
 <link rel="stylesheet" href="/assets/css/style.css">
+A collection of some of my favorite projects relating to geographic information systems (GIS) created for coursework at UCLA.
+
+Courses taken: Introduction to GIS, Intermediate GIS, Advanced GIS
+<br>
 <br>
 <div>
     <div class='row'>

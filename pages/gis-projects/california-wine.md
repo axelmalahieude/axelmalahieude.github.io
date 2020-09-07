@@ -82,7 +82,8 @@ Recall that we chose "well drained" as the ideal drainage level for vineyards.
 
 **Maps 4-6: Comparing our results to current winery locations**
 
-To conclude, I thought it would be interesting to evaluate how well California's current wineries have chosen their locations. In the following maps, we can see that most wineries are located in ideal conditions. However, a significant number of wineries in Southern California are in good but not ideal locations. This is interesting to note, and somewhat expected since temperatures are far more extreme during summer (which is the peak growing season) in Southern California than in Northern California.
+To conclude, I thought it would be interesting to evaluate how well California's current wineries have chosen their locations. In the following maps, we can see that most wineries are located in ideal conditions. However, a significant number of wineries in Southern California are in good but not ideal locations. This is interesting to note, and somewhat expected since temperatures are far more extreme during summer (which is the peak growing season) in Southern California than in Northern California. Furthermore, Southern California is more desertic, which means that soil drainage is typically
+higher than in Northern California, as shown in map 2.
 <img src="/assets/img/gis-projects/california-wine-3.jpg">
 <img src="/assets/img/gis-projects/california-wine-4.jpg">
 <img src="/assets/img/gis-projects/california-wine-5.jpg">

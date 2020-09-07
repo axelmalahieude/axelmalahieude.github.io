@@ -3,8 +3,10 @@
 
 @import "{{ site.theme }}";
 
-.column-wrapper {
+.container {
+    display: flex;
 }
+
 
 .row {
     display: flex;
@@ -27,6 +29,7 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: .8;
+    justify-content: center;
 }
 
 .circle-image {
@@ -51,5 +54,25 @@ h3 {
   
 .zoom:hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.svg-icon {
+    vertical-align: text-bottom;
+    overflow: visible;
+}
+
+span {
+    display: inline-flex;
+    align-items: center;
 }
   
