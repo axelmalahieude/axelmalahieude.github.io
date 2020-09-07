@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     margin-bottom: 30px;
   }
   
@@ -21,26 +20,31 @@
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    min-width: 150px;
-    max-width: 400px;
-    flex-basis: auto; /* default value */
-    flex-grow: 1;
 }
 
 .thin-column {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    // flex: 1;
     justify-content: center;
-    min-width: 300px;
-    max-width: 400px;
-    flex-basis: auto; /* default value */
-    flex-grow: 1;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+    .zoom {
+        margin-bottom: 30px;
+    }
 }
 
 .circle-image {
     border-radius: 50%;
-    width:100%;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:350px;
 }
 
 .image-container {
@@ -49,7 +53,6 @@
 }
 
 h3 {
-    margin-top: 10px;
     text-align: center;
 }
 
