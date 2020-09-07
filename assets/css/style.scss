@@ -46,6 +46,7 @@ h3 {
 
 .zoom {
     transition: transform .2s; /* Animation */
+    cursor: pointer;
 }
   
 .zoom:hover {
