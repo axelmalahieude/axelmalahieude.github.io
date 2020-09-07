@@ -16,7 +16,7 @@ Courses taken: Introduction to GIS, Intermediate GIS, Advanced GIS
             <h3>3D Mapping California Wildfires</h3>
         </div>
         <div class='column zoom' onclick="location.href='/gis-projects/california-wine'">
-            <div class="image-container"><img src="/assets/img/gis-projects/california-wine-2.jpg" width="200"></div>
+            <div class="image-container"><img src="/assets/img/gis-projects/california-wine-2.jpg" width="200" height="260"></div>
             <h3>Finding the Best Winemaking Regions in California</h3>
         </div>
     </div>
@@ -32,7 +32,7 @@ Courses taken: Introduction to GIS, Intermediate GIS, Advanced GIS
     </div>
     <div class='row'>
         <div class='column zoom' onclick="location.href='/gis-projects/california-temperature'">
-            <div class="image-container"><img src="/assets/img/gis-projects/california-temperature-0.jpg" width="200"></div>
+            <div class="image-container"><img src="/assets/img/gis-projects/california-temperature-0.jpg" width="200" height="260"></div>
             <h3>California Temperature Interpolation</h3>
         </div>
     </div>
