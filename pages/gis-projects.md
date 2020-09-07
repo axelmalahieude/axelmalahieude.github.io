@@ -4,6 +4,7 @@ title: "GIS Projects"
 permalink: /gis-projects/
 ---
 <link rel="stylesheet" href="/assets/css/style.css">
+<br>
 <div>
     <div class='row'>
         <div class='column zoom' onclick="location.href='/gis-projects/california-temperature'">
