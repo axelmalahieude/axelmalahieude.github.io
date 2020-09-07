@@ -1,0 +1,54 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.column-wrapper {
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    justify-content: center;
+}
+
+.thin-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: .8;
+}
+
+.circle-image {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+}
+  
+.zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+  
