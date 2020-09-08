@@ -95,6 +95,12 @@ permalink: /resume/
                     </li>
                     <li>
                         <div class="svg-container">
+                            <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#flag"></use></svg>
+                            <span><strong>Computer Science, B.S.</strong></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#pencil"></use></svg>
                             <span>Major GPA:&nbsp;<strong>3.79</strong></span>
                         </div>
