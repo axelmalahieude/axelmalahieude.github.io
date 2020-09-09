@@ -7,7 +7,6 @@
     display: flex;
 }
 
-
 .row {
     display: flex;
     flex-direction: row;
@@ -27,6 +26,15 @@
     flex-direction: column;
     // flex: 1;
     justify-content: center;
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    cursor: pointer;
+}
+  
+.zoom:hover {
+    transform: scale(1.2); /* (120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 /* < 600 pixels disable gridding and zoom */
@@ -57,19 +65,6 @@
     justify-content: center;
 }
 
-h3 {
-    text-align: center;
-}
-
-.zoom {
-    transition: transform .2s; /* Animation */
-    cursor: pointer;
-}
-  
-.zoom:hover {
-    transform: scale(1.2); /* (120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-
 .link-container {
     display: flex;
     align-items: center;
@@ -81,9 +76,27 @@ h3 {
     overflow: visible;
 }
 
+h3 {
+    text-align: center;
+}
+
 span {
     display: inline-flex;
     align-items: center;
+}
+
+table {
+    table-layout: fixed;
+}
+
+td, th {
+    text-align: center;
+}
+
+/* nested lists */
+ul ul {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 // Resume rules
