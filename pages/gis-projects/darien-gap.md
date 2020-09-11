@@ -2,6 +2,7 @@
 layout: page
 permalink: /gis-projects/darien-gap
 ---
+<link rel="stylesheet" href="/assets/css/style.css">
 <h1>Bridging the Darien Gap</h1>
 The purpose of this project was to use **cost-distance analysis** to determine the most efficient road
 through the Darien Gap, which is a dense and dangerous rainforest separating Panama and Columbia. The
@@ -10,10 +11,16 @@ the southern tip of Argentina.
 
 The factors evaluated were slope, bodies of water, and forested areas. Ideally, a road would be built
 on flat ground without the need for bridges or significant deforestation to clear a path. Therefore,
-the parameters provided to the cost-distance tool in ArcMap reflected these demands. This was configured
-by gathering elevation data from the USGS Earth Explorer and forest cover data from the Japanese
-Aerospace Exploration Agency's ALOS-2 project and performing raster analysis to aggregate the data.
+the parameters provided to the cost-distance tool in ArcMap reflected these demands. In terms of data, I started by gathering elevation data from the USGS Earth Explorer and forest cover data from the Japanese
+Aerospace Exploration Agency's ALOS-2 project.
 
+To add more context, the cost-distance tool was configured such that paths that had steeper sections would cost more, as would paths that cross water and/or forests. Water features would require bridges, so they were given a quite large cost so that we would avoid them more reliably. Forested areas are less difficult to traverse, but still add some cost since it requires uprooting dense trees, so they were made to cost just as much as the steepest road that can feasibly be built in an average countryside: approximately 10&deg;.
+
+From the stack profile, we can get a little insight into the nature of the roads we came up with. The steepest parts occur at the start of the journey (or at the end, if you're driving from Columbia to Panama).
+<div class="image-container">
+    <img src="/assets/img/gis-projects/darien-gap-stack-profile.png">
+</div>
+<br>
 The result is two
 possible routes, which connect Yaviza, Panama to either Apartado, Columbia or Chigorodo, Columbia.
 

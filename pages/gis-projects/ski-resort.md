@@ -238,7 +238,11 @@ To get a better visual understanding of this newly created ski area I created, I
 
 <iframe src="/webmap-final" width="100%" height="500px"></iframe>
 
+
+<h4 id="conclusion">Conclusion</h4><a href="#top">Back to top</a>
+
 <a href="#top">Back to top</a>
+
 <hr>
 <sup id="fn1">1. <a href="https://en.wikipedia.org/wiki/Comparison_of_North_American_ski_resorts">https://en.wikipedia.org/wiki/Comparison_of_North_American_ski_resorts</a>&nbsp;&nbsp;<a href="ref1">&#8593;</a></sup><br>
 <sup id="fn2">2. <a href="https://avalanche.org/avalanche-encyclopedia/aspect/">https://avalanche.org/avalanche-encyclopedia/aspect/</a>&nbsp;&nbsp;<a href="ref2">&#8593;</a></sup><br>

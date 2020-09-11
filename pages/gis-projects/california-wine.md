@@ -2,10 +2,17 @@
 layout: page
 permalink: /gis-projects/california-wine
 ---
+<link rel="stylesheet" href="/assets/css/style.css">
 <h1>Finding the Best Winegrowing Regions in California</h1>
 California is known for its wine countries, from Napa Valley all the way to Southern California.
 For my final project in Intermediate GIS, I decided to perform a suitability analysis to see which
 places in California are best suited for growing wine.
+
+**See this project in video format!**
+<div class="image-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nLeyDbTNjc8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
 
 To do this, I researched which factors are the most important when deciding on the location for your
 vineyard. Though it varies based on the variety of grapes, temperature and soil drainage were consistently
@@ -18,6 +25,8 @@ days for each specific region, which is a metric computed by summing the average
 which puts you on the following chart, and determines which grape varieties you could conceivably grow. Given that
 higher amounts of growing degree days limit the grape varieties you can grow to table grapes, region II was determined
 to be the most desirable.
+
+This process was done using the raster calculator in QGIS.
 
 <table>
     <tr>
@@ -57,7 +66,7 @@ classifies soils in 7 different levels, ranging from 1 ("very poorly drained") t
 a level of 5 ("well drained") is optimal.
 
 A simple "suitability index" was created, ranking ideal conditions (well drained, region II) with a score of 5 and 
-decreasing linearly as we get away from these conditions. When summing these two indices up, we get a score of 10 to rank each location based on how well it can support grapevines.
+decreasing linearly as we get away from these conditions. When summing these two indices up, we get a score of 10 to rank each location based on how well it can support grapevines. This involved vector overlay analysis, as the temperature raster data was converted to vector before combining these two data sets.
 
 
 **Summary**
