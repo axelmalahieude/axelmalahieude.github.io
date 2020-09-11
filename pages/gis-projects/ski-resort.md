@@ -4,7 +4,7 @@ permalink: /gis-projects/ca-ski-resort
 ---
 <link rel="stylesheet" href="/assets/css/style.css">
 <h1 id="top">Planning a New Ski Resort in California</h1>
-For my final project in Advanced GIS, I chose to use the tools and methods we had learned throughout the course to plan a new ski resort in California. This is a two-step process; first, I'll go through a site selection process to find a mountain suitable for a ski resort. Then, using cost-distance analysis, the goal will be to plan out a few slopes and ski lifts. Finally, the results will be presented in an interactive web map.
+For my final project in Advanced GIS, I chose to use the tools and methods we had learned throughout the course to plan a new ski resort in California. This is a two-step process; first, I'll go through a site selection process to find a mountain suitable for a ski resort. Then, using cost-distance analysis, the goal will be to plan out a few slopes and ski lifts. To better visualize these results, the final product will be presented in an interactive web map.
 
 I found this topic interesting because as someone who has skied extensively throughout California, I was curious as to how much potential there is for growth in the ski industry. I was also intrigued by all the different factors that go into making good ski conditions.
 
@@ -35,6 +35,7 @@ These links will take you to the corresponding section, if you wish to skip arou
             <li><a href="#ski-map">Ski Area Map</a></li>
             <li><a href="#ski-webmap">Webmap</a></li>
         </ul>
+    <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 
 <h2 id="site-selection">Stage 1: Selecting a Mountain</h2><a href="#top">Back to top</a>
@@ -177,15 +178,23 @@ Using the <a href="https://journals.ametsoc.org/bams/article/98/9/1897/70218/Two
 To incorporate this into our overall snowfall analysis, snowmaking was treated as a "bonus". That is, if a region has enough natural snowfall to support some level of skiing (i.e., scores 3, 4, or 5 in the table above), then their snowfall score was increased by one (e.g. a 4 becomes a 5). However, this was capped at 5 to avoid having scores of 6 out of 5.
 
 <h4 id="maps1">Maps</h4>
-The final step was to sum up all of these indices. After filtering out all places farther than 5 miles from an existing road, the following map was created:
-<img src="/assets/img/gis-projects/final-ca.jpg"> 
+The final step was to sum up all of these indices. The focus is placed on locations that scored 17 or over since otherwise the area will score too low in too many of the 5 mentioned criteria to be worth having a ski resort at. After filtering out all places farther than 5 miles from an existing road, the following map was created:
+<div class="tooltip" title="Click to see a full-size version of this map" onclick="window.open('/assets/pdf/california_areas.pdf', '_blank')">
+    <img src="/assets/img/gis-projects/final-ca.jpg">
+</div> 
 Clearly, the best places for ski resorts are in the Sierra Nevada. Zooming in to this region gives us a better idea for where we should make our new ski resort:
-<img src="/assets/img/gis-projects/final-sn.jpg">
+<div class="tooltip" title="Click to see a full-size version of this map" onclick="window.open('/assets/pdf/sierra_nevada_areas.pdf', '_blank')">
+    <img src="/assets/img/gis-projects/final-sn.jpg">
+</div> 
 <!-- One interesting thing I noted while going through this site selection process is how much area we lose by requiring that our ski resort be within 5 miles of an existing road. In hindsight, it makes sense, because there isn't a need for a road since the region is too mountainous to drive through, but it does mean that a significant amount of skiiable area is inaccessible.
 <img src="/assets/img/gis-projects/final-sn-all.jpg"> -->
-The area I will choose for this new ski resort is shown in this following map. After deliberation about which of the blue areas are to pick, I found this one to be the most promising. It is right off the border of a major highway, which means little to no road will need to be built, aside from a parking lot. It is also placed very close to large cities in the Tahoe area, including some in Nevada. The other promising locations I could have chosen is the area just southeast of Bear Valley and the area west of Independence. However, despite the fact that these areas are very close to a road, the road leading to these areas is incredibly windy and it would take visitors significantly longer to drive to the resort.
-<img src="/assets/img/gis-projects/final-site.jpg">
-<img src="/assets/img/gis-projects/final-site-terrain.jpg">
+The area I will choose for this new ski resort is shown in this following map. After deliberation about which of the top-scoring areas to pick, I found this one to be the most promising. It is located south of South Lake Tahoe and northeast of Kirkwood, on the north-facing slope of a mountain whose peak is roughly 3,000 feet above where the base camp would be. It is right off the border of a major highway, which means little to no road will need to be built, aside from a parking lot. It is also placed very close to large cities in the Tahoe area, including some in Nevada. The other promising locations I could have chosen are the area just southeast of Bear Valley and the area west of Independence. However, despite the fact that these areas are very close to a road, the road leading to these areas is incredibly windy and it would take visitors significantly longer to drive to the resort.
+<div class="tooltip" title="Click to see a full-size version of this map" onclick="window.open('/assets/pdf/site_proposal.pdf', '_blank')">
+    <img src="/assets/img/gis-projects/final-site.jpg">
+</div> 
+<div class="tooltip" title="Click to see a full-size version of this map" onclick="window.open('/assets/pdf/site_proposal_terrain.pdf', '_blank')">
+    <img src="/assets/img/gis-projects/final-site-terrain.jpg">
+</div> 
 
 <h2 id="slope-mapping">Stage 2: Planning the Ski Area</h2><a href="#top">Back to top</a>
 
@@ -198,14 +207,15 @@ Any ski resort needs chair lifts to transport skiers back to the top of runs. Fo
 The difficult part of picking a ski slope is ensuring it goes downhill for the entirety of the run. Otherwise, significant costs will need to be taken to fill or dig out any uphill areas, as these would present significant obstacles to skiers. A helpful tool for this is cost-distance analysis. In short, we define weights, or costs, of traversing from one point to another point, and the cost-distance algorithm uses these weights to find the "cheapest" path between two points. In our case, these weights are differences in elevation. By making positive differences in elevation (uphill) "cost" more than negative differences in elevation (downhill), we ensure that the cheapest path will be one that maximizes downhill sections. This process was done several times, each time with different chair lifts as our origin and destinations, in order to generate all of our ski slopes.
 
 <p><strong>Technical Details</strong></p>
-Elevation differences are natively supported by ArcMap's cost-distance tool by taking advantage of vertical factors and path-distance analysis. This requires specifying a depressionless DEM and makes an actual cost raster optional, since the vertical factors themselves are treated as costs. I started by making a depressionless DEM by eliminating sinks with the hydrology tools. Though a cost raster is optional, I decided to use an inverted slope raster as my costs in order to favor steeper downhill slopes over gentler downhill slopes (inverting the slope raster gives lower values to steeper slopes, making them "cheaper").
+Elevation differences are natively supported by ArcMap's cost-distance tool by taking advantage of <a href="https://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/how-the-horizonal-and-vertical-factors-affect-path-distance.htm">vertical factors and path-distance analysis</a>. This requires specifying a depressionless DEM and makes an actual cost raster optional, since the vertical factors themselves are treated as costs. This is a somewhat unconventional use of path-distance, because the entire premise of path-distance is that the <a href="https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/understanding-path-distance-analysis.htm#GUID-839042F2-B1AB-4D4F-A171-7DCE89F4A762">distance traveled changes when an incline is present</a>, but it works for ensuring a downhill slope in this case since the methodology is similar. I started by making a depressionless DEM by eliminating sinks with the hydrology tools. Though a cost raster is optional, I decided to use an inverted slope raster as my costs in order to favor steeper downhill slopes over gentler downhill slopes (inverting the slope raster gives lower values to steeper slopes, making them "cheaper").
 
 <p><strong>Checking the Results</strong></p>
 Now that I had generated all of these paths down the mountain, I wanted to verify that they were in fact downhill. To do this, I generated a stack profile for each slope. This means that for each slope, I plotted the distance along the slope against the elevation at that point. The expectation is that as our distance increases, elevation only decreases and never increases. 
 <div class="image-container">
     <img height="75%" width="75%" src="/assets/img/gis-projects/final-stack-profile.png">
 </div>
-This graph shows the elevation profile of Run 7, which goes from Chair Lift A down to Chair Lift D (see map below). By processing this data in Excel, I found that the average slope along this slope is 41°. Since ski slopes are ranked in terms of difficulty by their steepest and most difficult section, this puts Run 7 in the "black diamond" category. While other factors go into trail difficulty, such as obstacles, bumps, and any narrow sections, these can only be identified by being on-site. For the purposes of this project, the steepness of trails will be sufficient to determine trail difficulty.
+<br>
+This graph shows the elevation profile of Run 7, which goes from Chair Lift A down to Chair Lift D (see map below), and confirms that it is indeed a downhill trail, which is exactly what we wanted. By processing this data in Excel, I found that the average slope along this slope is 41°. Since ski slopes are ranked in terms of difficulty by their steepest and most difficult section, this puts Run 7 in the "black diamond" category. While other factors go into trail difficulty, such as obstacles, bumps, and any narrow sections, these can only be identified by being on-site. For the purposes of this project, the steepness of trails will be sufficient to determine trail difficulty.
 <table>
     <tr>
         <th>Slope incline (degrees)</th>
@@ -224,15 +234,17 @@ This graph shows the elevation profile of Run 7, which goes from Chair Lift A do
         <td>Black diamond (advanced)</td>
     </tr>
 </table>
-This analysis was repeated for the 7 other runs created using cost-distance analysis, resulting in 8 total ski slopes. 
+This analysis was repeated for the 7 other runs created using cost-distance analysis to verify the outcomes, resulting in 8 total ski slopes.
 
 <h4 id="ski-map">Ski Area Map</h4>
 The results of this analysis are shown below, with slopes highlighted according to difficulty and chair lift depicted.
 
-<img src="/assets/img/gis-projects/final-ski-area.jpg">
+<div class="tooltip" title="Click to see a full-size version of this map" onclick="window.open('/assets/pdf/ski_area_map.pdf', '_blank')">
+    <img src="/assets/img/gis-projects/final-ski-area.jpg">
+</div>
 
 <h4 id="ski-webmap">Ski Resort Webmap</h4>
-To get a better visual understanding of this newly created ski area I created, I turned the results into a webmap. You can scroll in the blue area to zoom in and out, and click and drag to pan. You can also click on all of the ski slopes and chair lifts and see more information, such as average slope, elevation, and distance. All units are in feet.
+To get a better visual understanding of this newly created ski area I created, I turned the results into a webmap. You can scroll in the blue area to zoom in and out, right click and drag to pan, and left click and drag to rotate. You can also click on all of the ski slopes and chair lifts and see more information, such as average slope, elevation, and distance. All units are in feet.
 
 <a href="/webmap-final" target="_blank">Click here</a> to see a full-size version of this webmap. Note that it may some time to load the webmap, depending on your internet connection.
 
@@ -240,6 +252,12 @@ To get a better visual understanding of this newly created ski area I created, I
 
 
 <h4 id="conclusion">Conclusion</h4><a href="#top">Back to top</a>
+
+In conclusion, I was able to find a place for a new ski resort in California and then design a ski area for the chosen location. Overall, the results are satisfying; though the site selection results initially surprised me by how few ideal ski areas there are, and made me wonder whether the selection criteria was too harsh, this actually helped in quickly finding a suitable place to build a resort. I was especially pleased with being able to look at the focal characteristics of areas with respect to elevation and slopes; it seems that this helped in being able to determine whether an area would be able to have downhill ski trails, since the second portion of this project had no problems with finding adequate slopes.
+
+It was also helpful that there existed a variant of cost-distance analysis that is able to take into account the elevation of the path. However, if I were to repeat this project, I would try to be more careful with the types of ski trails that are mapped. In this project, I added a cost raster with the goal of obtaining the steepest trails possible. However, this is to the detriment of less-advanced skiers because if the geography of the selected mountain were slightly different perhaps only black diamond-level trails would have been produced.
+
+Nevertheless, I learned a lot about ski resorts throughout this project, and was happy to have been able to create a trail map for a potential ski resort.
 
 <a href="#top">Back to top</a>
 

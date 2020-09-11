@@ -2,8 +2,8 @@
 layout: page
 permalink: /gis-projects/california-wildfires-august-2020
 ---
-<h1>3D Mapping California Wildfires in August 2020</h1>
 <link rel="stylesheet" href="/assets/css/style.css">
+<h1>3D Mapping California Wildfires in August 2020</h1>
 In August 2020, there were several large fires burning throughout the San Francisco Bay Area. As part of a 3D web mapping project, I decided to use the latest available data to create a 3D visualization of the situation. This web map presents the extent of the wildfires in the southeastern Bay Area as of August 27th, 2020. Air quality, major cities, affected buildings, and major roads are also shown. All of this data is mapped atop a digital elevation model to show relief.
 
 To perform this analysis, I first had to gather fire data from the <a href="https://data-nifc.opendata.arcgis.com/">National Interagency Fire Center</a>, which includes very up-to-date GIS data relating to wildfires. Air quality was obtained from the <a href="https://www.epa.gov/outdoor-air-quality-data/download-daily-data">EPA</a>, and finally, roads and buildings were obtained from OpenStreetMap and extracted as needed.
