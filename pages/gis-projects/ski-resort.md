@@ -8,6 +8,12 @@ For my final project in Advanced GIS, I chose to use the tools and methods we ha
 
 I found this topic interesting because as someone who has skied extensively throughout California, I was curious as to how much potential there is for growth in the ski industry. I was also intrigued by all the different factors that go into making good ski conditions.
 
+Check out this project in video format!
+
+<div class="image-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cgSS6tm9Ip8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
 **GIS Methods Used**
 * Interpolation
 * Site selection
