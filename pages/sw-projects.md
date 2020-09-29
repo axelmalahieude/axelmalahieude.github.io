@@ -6,7 +6,7 @@ permalink: /sw-projects/
 <link rel="stylesheet" href="/assets/css/style.css">
 My personal software projects that show some of my computer science interests.
 
-I really enjoy computer graphics, full-stack development, and mobile development. A few of the languages I'm most comfortable with are Kotlin, Java, and JavaScript, and they're the ones I most enjoy so I tend to use them when I can. Other languages I've used extensively in the past include Python, C, C+, and SQL.
+I really enjoy computer graphics, full-stack development, and systems and architecture. A few of the languages I'm most comfortable with are Kotlin, Java, and JavaScript, and they're the ones I most enjoy so I tend to use them when I can. Other languages I've used extensively in the past include Python, C, C+, and SQL.
 <br>
 <br>
 <div>
