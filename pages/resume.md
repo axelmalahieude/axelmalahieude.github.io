@@ -69,7 +69,7 @@ permalink: /resume/
                 <li>
                     <div class="svg-container">
                         <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#location"></use></svg>
-                        <span>GIS Software: QGIS, ArcMap, GeoDa</span>
+                        <span>GIS Software: QGIS, ArcMap, ENVI, GeoDa</span>
                     </div>
                 </li>
                 <li>
@@ -102,13 +102,13 @@ permalink: /resume/
                     <li>
                         <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#pencil"></use></svg>
-                            <span>Major GPA:&nbsp;<strong>3.79</strong></span>
+                            <span>Major GPA:&nbsp;<strong>3.83</strong></span>
                         </div>
                     </li>
                     <li>
                         <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#pencil"></use></svg>
-                            <span>Cumulative GPA:&nbsp;<strong>3.82</strong></span>
+                            <span>Cumulative GPA:&nbsp;<strong>3.84</strong></span>
                         </div>
                     </li>
                 </ul>
@@ -116,8 +116,8 @@ permalink: /resume/
             <div class='column'>
                 <ul>
                     <li><strong>Involvements:</strong> Unmanned Aerial Systems @ UCLA, Upsilon Pi Epsilon Honor Society</li>
-                    <li><strong>Relevant coursework:</strong> Networks, Databases, Web Applications, Data Structures & Algorithms,
-        Operating Systems, Programming Languages, Computer Graphics, Intro, Intermediate, & Advanced GIS</li>
+                    <li><strong>Relevant coursework:</strong> Compilers, Security, Networks, Databases, Web Applications, Data Structures & Algorithms,
+        Operating Systems, Programming Languages, Computer Graphics, Intro, Intermediate, & Advanced GIS, Remote Sensing</li>
                 </ul>
             </div>
         </div>
@@ -132,7 +132,7 @@ permalink: /resume/
                     <li>
                         <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#calendar"></use></svg>
-                            <span><strong>June 2020 - Present</strong></span>
+                            <span><strong>June 2020 - Nov 2020</strong></span>
                         </div>
                     </li>
                     <li>
@@ -248,15 +248,17 @@ permalink: /resume/
                     <li>
                         <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#code"></use></svg>
-                            <span>Typescript, Node.js</span>
+                            <span>Python, C++, Typescript, Node.js</span>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class='column'>
                 <ul>
-                    <li>Worked with a team on the web application that monitors our competition drone</li>
                     <li>Received a NASA USRC grant in July 2020 for our research proposal on autonomous drone swarms</li>
+                    <li>Programmed a drone to use real-time image recognition with <strong>OpenCV</strong> to hover above a designated target</li>
+                    <li>Created a Python simulator for this target-detecting drone for testing using <strong>Gazebo</strong>, later translated into C++</li>
+                    <li>This system uses <strong>MAVSDK</strong> to communicate with our on-board <strong>Pixhawk</strong></li>
                 </ul>
             </div>
         </div>
