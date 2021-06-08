@@ -248,7 +248,7 @@ permalink: /resume/
                     <li>
                         <div class="svg-container">
                             <svg class="svg-icon-big"><use xlink:href="/assets/img/icons.svg#code"></use></svg>
-                            <span>Python, C++, Typescript, Node.js</span>
+                            <span>Python, C++</span>
                         </div>
                     </li>
                 </ul>
@@ -256,9 +256,12 @@ permalink: /resume/
             <div class='column'>
                 <ul>
                     <li>Received a NASA USRC grant in July 2020 for our research proposal on autonomous drone swarms</li>
-                    <li>Programmed a drone to use real-time image recognition with <strong>OpenCV</strong> to hover above a designated target</li>
-                    <li>Created a Python simulator for this target-detecting drone for testing using <strong>Gazebo</strong>, later translated into C++</li>
-                    <li>This system uses <strong>MAVSDK</strong> to communicate with our on-board <strong>Pixhawk</strong></li>
+                    <li>Programmed a drone to use real-time computer vision with <strong>OpenCV</strong> to follow and approach a target</li>
+                    <li>Achieved centimeter-level precision using a PID controller to get as close to the target as possible before mechanically docking to the target area</li>
+                    <li>Created a Python simulator for this target-following drone for testing using <strong>Gazebo</strong>, later translated into C++</li>
+                    <li>This system uses <strong>MAVSDK</strong> to communicate with our on-board <strong>Pixhawk</strong> running a custom version of PX4</li>
+                    <li>More detail is available here: <a href="https://uasatucla.org/en/aviata/blog">AVIATA project updates</a></li>
+                    <li>Repository: <a href="https://github.com/uas-at-ucla/aviata">github.com/uas-at-ucla/aviata</a></li>
                 </ul>
             </div>
         </div>
